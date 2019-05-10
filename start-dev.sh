@@ -10,5 +10,8 @@ if [ ! -d "janusgraph-0.2.2-hadoop2" ]; then
   cd janusgraph-0.2.2-hadoop2
   sed -i "s/scriptEvaluationTimeout.*/scriptEvaluationTimeout: 180000/" conf/gremlin-server/gremlin-server-configuration.yaml
   ./bin/gremlin-server.sh conf/gremlin-server/gremlin-server-configuration.yaml
+else
+    cd janusgraph-0.2.2-hadoop2
+   ./bin/gremlin-server.sh conf/gremlin-server/gremlin-server-configuration.yaml
 fi
 
