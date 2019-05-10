@@ -8,7 +8,7 @@ ConfiguredGraphFactory.createConfiguration(new MapConfiguration(map));
 
 graph=ConfiguredGraphFactory.open("airroutes");
 
-graph.io(graphml()).readGraph('/tmp/air-routes.graphml');
+graph.io(graphml()).readGraph('./air-routes.graphml');
 
 graph.tx().commit();
 

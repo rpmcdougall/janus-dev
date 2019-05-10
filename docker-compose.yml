@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  cassandra:
+    image: 'cassandra:3.11'
+    ports:
+      - '7000:7000'
+      - '9042:9042'
+    environment:
+      - CASSANDRA_START_RPC=true
+  elastic:
+    image: 'docker.elastic.co/elasticsearch/elasticsearch:7.0.1'
+    environment:
+      - "discovery.type=single-node"
+    ports:
+      - '9200:9200'
+      - '9300:9300'
